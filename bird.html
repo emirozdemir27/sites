@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-image: url(images/1123556.png);
+            background-size: cover;
+            color:aliceblue;
+        }
+        .btn-zipla{
+            padding: 20px 50px;
+            font-size: medium;
+            font-weight: 600;
+            background: linear-gradient(45deg,purple,#003d6e);
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: -50px;
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+        }
+        .btn-reload{
+            padding: 20px 20px;
+            background: none;
+            cursor: pointer;
+            color: aliceblue;
+            
+        }button:hover {
+        background: linear-gradient(45deg, #0097a7, #006f75); /* Üzerine gelince renk geçişi koyu tonlara kayar */
+        box-shadow: 0 8px 20px rgba(0, 151, 167, 0.6); /* Gölge biraz daha belirginleşir */
+            }
+
+        button:active{
+        transform: scale(0.95);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) insert;
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+    
+    <canvas id="gameCanvas" width="600" height="525" style="display: block; margin: 0 auto;"></canvas>
+    <br>
+    <button class="btn-reload" onclick="location.reload()">⟳</button>
+    <button class="btn-zipla" onclick="jump()">ZIPLA!</button>
+    
+    <script src="flappy.js"></script>
+</body>
+</html>

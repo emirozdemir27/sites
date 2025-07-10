@@ -1,0 +1,113 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Babangi Oyun Merkezi</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-y: scroll;
+      font-family: 'Share Tech Mono', monospace;
+      scroll-behavior: smooth;
+    }
+    
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #10022b; /* zemin siyah */
+      z-index: -1;
+    }
+    ::-webkit-scrollbar {
+    width: 0px;
+    }
+    .content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      color: #00ffcc;
+      padding-top: 40px;
+    }
+
+    button {
+      background: transparent;
+      border: 2px solid #00ffcc;
+      color: #00ffcc;
+      padding: 12px 24px;
+      font-size: 1.2em;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #00ffcc;
+      color: #000;
+    }
+
+    iframe {
+      width: 90%;
+      height: 700px;
+      border-radius: 10px;
+      border: none;
+      margin-top: 20px;
+      box-shadow: 0 0 20px #00ffcc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ⭐️ Uzay arka planı -->
+  <div id="particles-js"></div>
+
+  <!-- 📦 İçerik -->
+  <div class="content">
+    <h1>BABANGİ UZAY MERKEZİ</h1>
+    <div class="button-container">
+      <button onclick="loadGame('mayintarlasi.html')">🧨 Mayın Tarlası</button>
+      <button onclick="loadGame('bird.html')">🐔 Birdo</button>
+      <button onclick="loadGame('oyun3.html')">🕹️ Oyun 3</button>
+    </div>
+
+    <iframe id="gameFrame"></iframe>
+  </div>
+
+  <!-- 🎇 Particles.js kütüphanesi -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.7 },
+        "size": { "value": 2 },
+        "move": {
+          "enable": true,
+          "speed": 0.6,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        }
+      },
+      "retina_detect": true
+    });
+
+    function loadGame(url) {
+      document.getElementById('gameFrame').src = url;
+    }
+  </script>
+
+</body>
+</html>

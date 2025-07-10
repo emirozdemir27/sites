@@ -1,0 +1,54 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: #010214;
+    color:aliceblue;
+}
+
+#game{
+    display: grid;
+    grid-template-columns: repeat(10,30px);
+    justify-content: center;
+    grid-gap: 2px
+}
+
+.cell{
+    width: 30px;
+    height: 30px;
+    background: #444;
+    border: 1px solid #666;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+
+}
+
+.cell.revealed{
+    background: #888;
+    cursor:default;
+}
+
+.cell.cell.revealed.bomb{
+    background-color: darkred;
+}
+
+button{
+    padding: 12px 28px;
+    font-size: medium;
+    font-weight: 600;
+    background: linear-gradient(45deg,purple,#004075);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 13px auto;
+
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+button:hover {
+    background: linear-gradient(45deg, #0097a7, #006f75); /* Üzerine gelince renk geçişi koyu tonlara kayar */
+    box-shadow: 0 8px 20px rgba(0, 151, 167, 0.6); /* Gölge biraz daha belirginleşir */
+}
+
+button:active{
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) insert;
+}
