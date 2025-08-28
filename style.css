@@ -3,6 +3,7 @@ body{
     text-align: center;
     background: #010214;
     color:aliceblue;
+    
 }
 
 #game{
@@ -51,4 +52,5 @@ button:hover {
 button:active{
     transform: scale(0.95);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) insert;
+
 }
